@@ -9,13 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView{
+            MainView()
+                .tabItem {
+                    Image(systemName: "house")
+                }
+            WriteView()
+                .tabItem {
+                    Image(systemName: "square.and.pencil")
+                }
         }
-        .padding()
+        .accentColor(Color(r:130, g: 170, b: 227))
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
     }
 }
 
