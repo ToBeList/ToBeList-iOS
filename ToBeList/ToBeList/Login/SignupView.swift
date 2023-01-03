@@ -14,6 +14,13 @@ struct SignupView: View {
     
     var body: some View {
         VStack {
+            Image("rabbit")
+                .resizable()
+                .frame(width: 70, height: 70)
+            Divider()
+                .background(Color(r:130, g: 170, b: 227))
+                .frame(width: 300)
+                .padding()
             HStack {
                 Spacer()
                 TextField("아이디", text: $id)
@@ -32,16 +39,28 @@ struct SignupView: View {
                 Spacer()
             }
             .padding(10)
-            Button(action: {
-                presention.wrappedValue.dismiss()
-            }) {
-                Text("가입하기")
-                    .bold()
+            HStack {
+                Button(action: {
+                    presention.wrappedValue.dismiss()
+                }) {
+                    Text("뒤로가기")
+                        .bold()
+                }
+                .frame(width: 100, height: 35, alignment: .center)
+                .background(RoundedRectangle(cornerRadius: 40).fill(Color(r:130, g: 170, b: 227)))
+                .font(.system(size: 20))
+                .foregroundColor(Color.white)
+                Button(action: {
+                    presention.wrappedValue.dismiss()
+                }) {
+                    Text("가입하기")
+                        .bold()
+                }
+                .frame(width: 100, height: 35, alignment: .center)
+                .background(RoundedRectangle(cornerRadius: 40).fill(Color(r:130, g: 170, b: 227)))
+                .font(.system(size: 20))
+                .foregroundColor(Color.white)
             }
-            .frame(width: 100, height: 35, alignment: .center)
-            .background(RoundedRectangle(cornerRadius: 40).fill(Color(r:130, g: 170, b: 227)))
-            .font(.system(size: 20))
-            .foregroundColor(Color.white)
         }
     }
 }
