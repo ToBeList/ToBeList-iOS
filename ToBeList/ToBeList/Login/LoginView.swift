@@ -31,6 +31,7 @@ struct LoginView: View {
                     .background(Color(r:130, g: 170, b: 227))
                     .frame(width: 300)
                     .padding()
+                //Spacer()
                 HStack {
                     Spacer()
                     TextField("아이디", text: $id)

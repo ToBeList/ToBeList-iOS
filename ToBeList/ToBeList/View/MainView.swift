@@ -9,7 +9,17 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        Text("home")
+        VStack{
+            HStack {
+                Image("rabbit")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                Text("jh 님")
+                Spacer()
+            }
+            .padding()
+            Spacer()
+        }
     }
 }
 

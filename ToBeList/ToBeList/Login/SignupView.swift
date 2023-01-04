@@ -11,6 +11,7 @@ struct SignupView: View {
     @Environment(\.presentationMode) var presention
     @State private var id: String = ""
     @State private var password: String = ""
+    @State private var password2: String = ""
     
     var body: some View {
         VStack {
@@ -40,13 +41,22 @@ struct SignupView: View {
             }
             .padding(10)
             HStack {
+                Spacer()
+                SecureField("비밀번호 확인", text: $password2)
+                //.textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
+                Spacer()
+            }
+            .padding(10)
+            HStack {
                 Button(action: {
                     presention.wrappedValue.dismiss()
                 }) {
                     Text("뒤로가기")
                         .bold()
                 }
-                .frame(width: 100, height: 35, alignment: .center)
+                .frame(width: 100, height: 35)
                 .background(RoundedRectangle(cornerRadius: 40).fill(Color(r:130, g: 170, b: 227)))
                 .font(.system(size: 20))
                 .foregroundColor(Color.white)
@@ -56,7 +66,7 @@ struct SignupView: View {
                     Text("가입하기")
                         .bold()
                 }
-                .frame(width: 100, height: 35, alignment: .center)
+                .frame(width: 100, height: 35)
                 .background(RoundedRectangle(cornerRadius: 40).fill(Color(r:130, g: 170, b: 227)))
                 .font(.system(size: 20))
                 .foregroundColor(Color.white)
