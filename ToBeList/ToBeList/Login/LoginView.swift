@@ -35,7 +35,6 @@ struct LoginView: View {
                 HStack {
                     Spacer()
                     TextField("아이디", text: $id)
-                    //.textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
                         .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
                     Spacer()
@@ -44,7 +43,6 @@ struct LoginView: View {
                 HStack {
                     Spacer()
                     SecureField("비밀번호", text: $password)
-                    //.textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
                         .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
                     Spacer()

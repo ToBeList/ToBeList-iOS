@@ -9,9 +9,10 @@ import SwiftUI
 
 struct SignupView: View {
     @Environment(\.presentationMode) var presention
-    @State private var id: String = ""
+    @State private var email: String = ""
+    @State private var nickname: String = ""
     @State private var password: String = ""
-    @State private var password2: String = ""
+    @State private var checkedPassword: String = ""
     
     var body: some View {
         VStack {
@@ -24,8 +25,16 @@ struct SignupView: View {
                 .padding()
             HStack {
                 Spacer()
-                TextField("아이디", text: $id)
+                TextField("이메일", text: $email)
                 //.textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
+                Spacer()
+            }
+            .padding(10)
+            HStack {
+                Spacer()
+                TextField("닉네임", text: $nickname)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
                 Spacer()
@@ -34,7 +43,6 @@ struct SignupView: View {
             HStack {
                 Spacer()
                 SecureField("비밀번호", text: $password)
-                //.textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
                 Spacer()
@@ -42,8 +50,7 @@ struct SignupView: View {
             .padding(10)
             HStack {
                 Spacer()
-                SecureField("비밀번호 확인", text: $password2)
-                //.textFieldStyle(RoundedBorderTextFieldStyle())
+                SecureField("비밀번호 확인", text: $checkedPassword)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
                 Spacer()

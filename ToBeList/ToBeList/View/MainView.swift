@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
+    @State private var data = Date()
+    
     var body: some View {
         VStack{
             HStack {
@@ -18,6 +20,9 @@ struct MainView: View {
                 Spacer()
             }
             .padding()
+            DatePicker("d", selection: $data)
+                .datePickerStyle(.graphical)
+                .frame(maxHeight: 400)
             Spacer()
         }
     }
