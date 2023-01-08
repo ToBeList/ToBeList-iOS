@@ -13,8 +13,7 @@
 		F7BB0E7629605C980009C357 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BB0E7529605C980009C357 /* ContentView.swift */; };
 		F7BB0E7829605C9B0009C357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7BB0E7729605C9B0009C357 /* Assets.xcassets */; };
 		F7BB0E7B29605C9B0009C357 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7BB0E7A29605C9B0009C357 /* Preview Assets.xcassets */; };
-		F7DE7A50296865D2005EB412 /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DE7A4F296865D2005EB412 /* CalenderView.swift */; };
-		F7DE7A52296866AC005EB412 /* EventsCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DE7A51296866AC005EB412 /* EventsCalendarView.swift */; };
+		F7C480D729699D0600309D3F /* HabitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C480D629699D0600309D3F /* HabitListView.swift */; };
 		F7F25DC62963113D00858039 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F25DC52963113D00858039 /* SignupView.swift */; };
 		F7F2DB8F2961B6B90054E465 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F2DB8E2961B6B90054E465 /* LoginView.swift */; };
 /* End PBXBuildFile section */
@@ -27,9 +26,8 @@
 		F7BB0E7529605C980009C357 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F7BB0E7729605C9B0009C357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7BB0E7A29605C9B0009C357 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F7C480D629699D0600309D3F /* HabitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListView.swift; sourceTree = "<group>"; };
 		F7C4EC6629671588007F04FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		F7DE7A4F296865D2005EB412 /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
-		F7DE7A51296866AC005EB412 /* EventsCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCalendarView.swift; sourceTree = "<group>"; };
 		F7F25DC52963113D00858039 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		F7F2DB8E2961B6B90054E465 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,7 +55,6 @@
 		F7BB0E6729605C980009C357 = {
 			isa = PBXGroup;
 			children = (
-				F7DE7A532968709F005EB412 /* test */,
 				F7BB0E7229605C980009C357 /* ToBeList */,
 				F7BB0E7129605C980009C357 /* Products */,
 			);
@@ -93,20 +90,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		F7DE7A532968709F005EB412 /* test */ = {
-			isa = PBXGroup;
-			children = (
-				F7DE7A51296866AC005EB412 /* EventsCalendarView.swift */,
-				F7DE7A4F296865D2005EB412 /* CalenderView.swift */,
-			);
-			path = test;
-			sourceTree = "<group>";
-		};
 		F7F2DB8D2961B69A0054E465 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				F7A2FBB42961CDF000791F6F /* MainView.swift */,
 				F7A2FBB62961CE2E00791F6F /* WriteView.swift */,
+				F7C480D629699D0600309D3F /* HabitListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,12 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C480D729699D0600309D3F /* HabitListView.swift in Sources */,
 				F7F25DC62963113D00858039 /* SignupView.swift in Sources */,
 				F7F2DB8F2961B6B90054E465 /* LoginView.swift in Sources */,
 				F7A2FBB52961CDF000791F6F /* MainView.swift in Sources */,
-				F7DE7A50296865D2005EB412 /* CalenderView.swift in Sources */,
 				F7A2FBB72961CE2E00791F6F /* WriteView.swift in Sources */,
-				F7DE7A52296866AC005EB412 /* EventsCalendarView.swift in Sources */,
 				F7BB0E7629605C980009C357 /* ContentView.swift in Sources */,
 				F7BB0E7429605C980009C357 /* ToBeListApp.swift in Sources */,
 			);

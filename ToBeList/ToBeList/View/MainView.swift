@@ -8,22 +8,37 @@
 import SwiftUI
 
 struct MainView: View {
-    @State private var data = Date()
+    @State private var date = Date() // 선택한 날짜
+    @State private var habitlist = false
     
     var body: some View {
-        VStack{
-            HStack {
-                Image("rabbit")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                Text("jh 님")
+        ScrollView {
+            VStack{
+                HStack {
+                    Image("rabbit")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                    Text("jh 님")
+                    Spacer()
+                }
+                .padding()
+                DatePicker("d", selection: $date)
+                    .datePickerStyle(.graphical)
+                    .frame(maxHeight: 400)
+                    .onChange(of: date, perform: { newValue in
+                        habitlist.toggle()
+                    })
+                    .sheet(isPresented: self.$habitlist) {
+                        HabitListView()
+                                .presentationDetents([.medium, .large])
+                   }
                 Spacer()
+//                Text(date, format: Date.FormatStyle()
+//                    .year()
+//                    .month(.wide)
+//                    .day(.defaultDigits)
+//                )
             }
-            .padding()
-            DatePicker("d", selection: $data)
-                .datePickerStyle(.graphical)
-                .frame(maxHeight: 400)
-            Spacer()
         }
     }
 }
