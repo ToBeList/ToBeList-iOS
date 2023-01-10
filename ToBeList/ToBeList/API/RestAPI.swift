@@ -7,10 +7,15 @@
 
 import Foundation
 
-struct Login: Hashable, Codable {
-    let id: Int
+struct SignUp: Hashable, Codable {
     let email: String
     let nickname: String
+    let password: String
+    let checkedPassword: String
+}
+
+struct Login: Hashable, Codable {
+    let email: String
     let password: String
 }
 
