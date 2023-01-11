@@ -14,6 +14,7 @@
 		F7BB0E7629605C980009C357 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BB0E7529605C980009C357 /* ContentView.swift */; };
 		F7BB0E7829605C9B0009C357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7BB0E7729605C9B0009C357 /* Assets.xcassets */; };
 		F7BB0E7B29605C9B0009C357 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7BB0E7A29605C9B0009C357 /* Preview Assets.xcassets */; };
+		F7BCBB5A296E922700DA5A1C /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCBB59296E922700DA5A1C /* MainTabView.swift */; };
 		F7C480D729699D0600309D3F /* HabitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C480D629699D0600309D3F /* HabitListView.swift */; };
 		F7F25DC62963113D00858039 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F25DC52963113D00858039 /* SignupView.swift */; };
 		F7F2DB8F2961B6B90054E465 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F2DB8E2961B6B90054E465 /* LoginView.swift */; };
@@ -28,6 +29,7 @@
 		F7BB0E7529605C980009C357 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F7BB0E7729605C9B0009C357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7BB0E7A29605C9B0009C357 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F7BCBB59296E922700DA5A1C /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		F7C480D629699D0600309D3F /* HabitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListView.swift; sourceTree = "<group>"; };
 		F7C4EC6629671588007F04FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F7F25DC52963113D00858039 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -86,7 +88,6 @@
 				F7F2DB8D2961B69A0054E465 /* View */,
 				F72FBA1D296C48D2008E9188 /* API */,
 				F7BB0E7329605C980009C357 /* ToBeListApp.swift */,
-				F7BB0E7529605C980009C357 /* ContentView.swift */,
 				F7BB0E7729605C9B0009C357 /* Assets.xcassets */,
 				F7BB0E7929605C9B0009C357 /* Preview Content */,
 			);
@@ -104,6 +105,8 @@
 		F7F2DB8D2961B69A0054E465 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F7BB0E7529605C980009C357 /* ContentView.swift */,
+				F7BCBB59296E922700DA5A1C /* MainTabView.swift */,
 				F7A2FBB42961CDF000791F6F /* MainView.swift */,
 				F7A2FBB62961CE2E00791F6F /* WriteView.swift */,
 				F7C480D629699D0600309D3F /* HabitListView.swift */,
@@ -184,6 +187,7 @@
 			files = (
 				F72FBA1C296C47CF008E9188 /* RestAPI.swift in Sources */,
 				F7C480D729699D0600309D3F /* HabitListView.swift in Sources */,
+				F7BCBB5A296E922700DA5A1C /* MainTabView.swift in Sources */,
 				F7F25DC62963113D00858039 /* SignupView.swift in Sources */,
 				F7F2DB8F2961B6B90054E465 /* LoginView.swift in Sources */,
 				F7A2FBB52961CDF000791F6F /* MainView.swift in Sources */,

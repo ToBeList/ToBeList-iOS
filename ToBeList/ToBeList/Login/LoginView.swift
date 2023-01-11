@@ -14,10 +14,14 @@ extension Color {
 }
 
 struct LoginView: View {
-    @State private var id: String = ""
+    @State private var email: String = ""
     @State private var password: String = ""
     @State private var signup = false
     @State var tag:Int? = nil
+    @StateObject var api = RestAPI()
+    @State private var error = false
+    @Binding var loginSuccess: Bool
+    
     
     var body: some View {
         NavigationView {
@@ -34,8 +38,9 @@ struct LoginView: View {
                 //Spacer()
                 HStack {
                     Spacer()
-                    TextField("아이디", text: $id)
+                    TextField("이메일", text: $email)
                         .padding()
+                        .autocapitalization(.none) // 자동으로 대문자 설정 안하기
                         .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
                     Spacer()
                 }
@@ -49,9 +54,22 @@ struct LoginView: View {
                 }
                 .padding(10)
                 HStack {
-                    NavigationLink(destination: ContentView(), tag: 1, selection: self.$tag){}
+//                    NavigationLink(destination: ContentView(), tag: 1, selection: self.$tag){}
                     Button(action: {
-                        self.tag = 1
+//                        self.tag = 1
+                        // 이메일, 비밀번호 로그인 api 파라미터로 보내주기
+                        let parameters: [String: Any] = ["email": email, "password": password]
+                        api.LoginSuccess(parameters: parameters)
+                        print(api.loginsuccess)
+                        if api.loginsuccess == true {
+                            print(api.loginsuccess)
+                            self.loginSuccess = true
+                        }
+                        else {
+                            self.error = true
+                        }
+                        
+                        
                     }) {
                         Text("로그인")
                             .frame(width: 100, height: 35)
@@ -77,13 +95,17 @@ struct LoginView: View {
                 }
                 .padding()
                 Spacer()
+                if error {
+                    Text("이메일 또는 비밀번호 오류")
+                        .foregroundColor(Color.red)
+                }
             }
         }
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
+//struct LoginView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginView()
+//    }
+//}

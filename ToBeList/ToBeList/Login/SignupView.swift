@@ -13,6 +13,7 @@ struct SignupView: View {
     @State private var nickname: String = ""
     @State private var password: String = ""
     @State private var checkedPassword: String = ""
+    @StateObject var api = RestAPI()
     
     var body: some View {
         VStack {
@@ -28,6 +29,7 @@ struct SignupView: View {
                 TextField("이메일", text: $email)
                 //.textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
+                    .autocapitalization(.none) // 자동으로 대문자 설정 안하기
                     .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
                 Spacer()
             }
@@ -68,7 +70,19 @@ struct SignupView: View {
                 .font(.system(size: 20))
                 .foregroundColor(Color.white)
                 Button(action: {
-                    presention.wrappedValue.dismiss()
+                    if email != "" && nickname != "" && password != "" && checkedPassword != "" {
+                        let parameters: [String: Any] = ["email": email, "nickname": nickname, "password": password, "checkedPassword": checkedPassword]
+                        api.Signup(parameters: parameters)
+                        
+                        // api 보냈으니까 text 비워주기
+                        email = ""
+                        nickname = ""
+                        password = ""
+                        checkedPassword = ""
+                        presention.wrappedValue.dismiss()
+                    } else {
+                        presention.wrappedValue.dismiss()
+                    }
                 }) {
                     Text("가입하기")
                         .bold()
@@ -82,8 +96,8 @@ struct SignupView: View {
     }
 }
 
-struct SignupView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignupView()
-    }
-}
+//struct SignupView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SignupView()
+//    }
+//}

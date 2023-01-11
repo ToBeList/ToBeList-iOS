@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  MainTabView.swift
 //  ToBeList
 //
-//  Created by Jinhee on 2022/12/31.
+//  Created by Jinhee on 2023/01/11.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainTabView: View {
     var body: some View {
         TabView{
             MainView()
@@ -25,8 +25,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainTabView()
     }
 }

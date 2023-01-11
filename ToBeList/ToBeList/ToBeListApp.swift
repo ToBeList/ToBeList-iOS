@@ -11,7 +11,8 @@ import SwiftUI
 struct ToBeListApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            //LoginView()
+            ContentView()
         }
     }
 }

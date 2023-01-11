@@ -4,5 +4,10 @@
 <dict>
 	<key>Localization native development regin </key>
 	<string>Korea</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
