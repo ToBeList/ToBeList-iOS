@@ -38,6 +38,7 @@ struct SignupView: View {
                 Spacer()
                 TextField("닉네임", text: $nickname)
                     .padding()
+                    .autocapitalization(.none) // 자동으로 대문자 설정 안하기
                     .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
                 Spacer()
             }

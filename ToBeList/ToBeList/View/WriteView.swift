@@ -11,6 +11,7 @@ struct WriteView: View {
     @State private var habits = ["책 읽기","운동하기","공부하기"]
     @State var showingAlert = false
     @State var newHabit: String = ""
+    @StateObject var api = RestAPI()
     
     var addHabitBar: some View {
         HStack {
@@ -46,8 +47,14 @@ struct WriteView: View {
                     ForEach(habits, id: \.self) { habits in
                         Text(habits)
                     }
+//                    ForEach(api.goals, id: \.self) { goal in
+//                        Text(goal.goal)
+//                    }
                     .onDelete(perform: deleteHabit)
                 }.listStyle(PlainListStyle())
+                    .onAppear {
+                        api.GoalGet()
+                    }
                 //.navigationBarTitle("2023 목표", displayMode: .inline)
             }
         //}

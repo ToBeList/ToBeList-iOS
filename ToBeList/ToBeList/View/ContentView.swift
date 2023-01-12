@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     @State var loginSuccess = false
-    
+
     var body: some View {
-        
+
         return Group {
             if loginSuccess {
                 MainTabView()
@@ -39,8 +39,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
